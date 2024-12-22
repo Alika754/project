@@ -1,48 +1,112 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ветеренария</title>
-  </head>
-  <body>
-    <header>
-      <div>Логотип</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ветеринарная клиника</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="header">
+    <div class='header-line'>
       <div>
-        <nav>
-          <ul>
-            <li><a href="#home">Главная</a></li>
-            <li><a href="#services">Усуги</a></li>
-            <li><a href="#contacts">Контакты</a></li>
-          </ul>
-        </nav>
-        <button>Запись на прём</button>
+        <img class="header-logo" src="images/1.jpg" alt="header-logo">
       </div>
-      <button>вход и регистрация</button>
-    </header>
-    <main>
-      <section>
-        Скидка
-        <div>Товар</div>
-      </section>
-      <section>
-        <h2>Отзывы владельцев животных</h2>
-        <div>
-          <div>Фото, текст отзыва</div>
-          <div>Фото, текст отзыва</div>
+      <div class="btn">
+        <a class="buttonlog">Главное меню (каталог услуг)</a>
+      </div> 
+      <div class="btn">
+        <a class="buttonlog" href="#openModal">Записаться на прием</a>
+      </div> 
+      <div class="btn">
+        <a class="buttonlog" href="#openModalAuth">Вход и регистрация</a>
+      </div>
+      <div id="openModalAuth" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Авторизация</h3>
+              <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body">
+              <form action="form1.php" method="post">
+                <label for='name'>Имя:</label>
+                <input type='text' id='name' name='name'><br>
+                <label for='telephone'>Телефон:</label>
+                <input type='tel' id='telephone' name='telephone'><br>
+                <label for='comment'>Комментарий:</label><br>
+                <textarea style="height: 157px; width: 447px;"></textarea><br>
+                <br>
+                <input class="close_button" type="submit" value="Авторизироваться">
+              </form>
+            </div>
+          </div>
         </div>
-        <button>-></button>
-      </section>
-    </main>
-    <footer>
-      <div>Карта с адресом</div>
-      <section>
-        <h2>Контакты</h2>
-        <ul>
-          <li>Телефон</li>
-          <li>Ссылка на соцсети</li>
-        </ul>
-      </section>
-    </footer>
-  </body>
+      </div>
+      <div id="openModal" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Записаться на прием</h3>
+              <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body">
+              <form action="form1.php" method="post">
+                <label for='name'>Имя:</label>
+                <input type='text' id='name' name='name'><br>
+                <label for='telephone'>Телефон:</label>
+                <input type='tel' id='telephone' name='telephone'><br>
+                <label for='comment'>Комментарий:</label><br>
+                <textarea style="height: 157px; width: 447px;"></textarea><br>
+                <br>
+                <input class="close_button" type="submit" value="Записаться">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Блок "Скидка" -->
+    <div class="discount-block">
+      <img src="images/2.jpg" alt="Товар со скидкой">
+      <div class="discount-info">
+        <h3>Товар со скидкой!</h3>
+        <p>Успейте купить по специальной цене!</p>
+        <a >Подробнее</a>
+      </div>
+    </div>
+    <div class="reviews-block">
+      <h2>Отзывы владельцев животных</h2>
+      <div class="reviews-container">
+        <div class="review">
+          <p>
+            "Отличная ветеринарная клиника! Врачи очень внимательные и профессиональные. Нашему коту сделали все необходимое, и он быстро поправился. Спасибо большое!"
+          </p>
+        </div>
+        <div class="review">
+          <p>
+            "Обращались в эту клинику впервые, и остались очень довольны. Все прошло быстро и безболезненно для нашей собаки. Рекомендуем!"
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class='header-underline'>
+      <div class="phone">
+        <div class="phone-holder">
+          <div class="number">
+            <a class="num" href="tel:+79021016654">+7 902-101-66-54</a>
+          </div>
+        </div>
+        <div class="phone-text">
+          Свяжитесь с нами <br> для записи в группы
+        </div>
+      </div>
+      <div class="btn">
+        <a class="buttonlog">Где мы находимся</a>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
+   
